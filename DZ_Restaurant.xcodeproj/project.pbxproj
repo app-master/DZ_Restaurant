@@ -18,6 +18,7 @@
 		CEBF846122A240D400CABF30 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF846022A240D400CABF30 /* Categories.swift */; };
 		CEBF846422A2418500CABF30 /* MenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF846322A2418500CABF30 /* MenuItems.swift */; };
 		CEBF846622A241CB00CABF30 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF846522A241CB00CABF30 /* MenuItem.swift */; };
+		CEBF846822A2A38700CABF30 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF846722A2A38700CABF30 /* URL+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		CEBF846022A240D400CABF30 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		CEBF846322A2418500CABF30 /* MenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItems.swift; sourceTree = "<group>"; };
 		CEBF846522A241CB00CABF30 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		CEBF846722A2A38700CABF30 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "URL+Extension.swift"; path = "../URL+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		CEBF843F22A1B8CC00CABF30 /* DZ_Restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				CEBF846922A2A39700CABF30 /* Extensions */,
 				CEBF845F22A1BF8300CABF30 /* Managers */,
 				CEBF846222A240DE00CABF30 /* Models */,
 				CEBF845C22A1BED400CABF30 /* View Controllers */,
@@ -120,6 +123,14 @@
 				CEBF846522A241CB00CABF30 /* MenuItem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CEBF846922A2A39700CABF30 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEBF846722A2A38700CABF30 /* URL+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 				CEBF844122A1B8CC00CABF30 /* AppDelegate.swift in Sources */,
 				CEBF845722A1BE3100CABF30 /* CategoriesTableViewController.swift in Sources */,
 				CEBF846422A2418500CABF30 /* MenuItems.swift in Sources */,
+				CEBF846822A2A38700CABF30 /* URL+Extension.swift in Sources */,
 				CEBF846622A241CB00CABF30 /* MenuItem.swift in Sources */,
 				CEBF845B22A1BEBD00CABF30 /* OrderViewController.swift in Sources */,
 				CEBF846122A240D400CABF30 /* Categories.swift in Sources */,

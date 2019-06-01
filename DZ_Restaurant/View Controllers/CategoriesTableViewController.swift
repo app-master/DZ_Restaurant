@@ -37,6 +37,7 @@ class CategoriesTableViewController: UITableViewController {
 // MARK: - UITableViewDataSource
 
 extension CategoriesTableViewController {
+    
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
     }
@@ -49,9 +50,29 @@ extension CategoriesTableViewController {
     
        let category = categories[indexPath.row]
     
-       cell.textLabel?.text = category
+       cell.textLabel?.text = category.capitalized
     
        return cell
     
     }
+}
+
+// MARK: - UITableViewDelegate
+
+extension CategoriesTableViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let categoryName = categories[indexPath.row]
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: "MenuItemsTableViewController") as! MenuItemsTableViewController
+        
+        vc.categoryName = categoryName
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
 }

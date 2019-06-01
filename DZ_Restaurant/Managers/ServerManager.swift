@@ -8,6 +8,22 @@
 
 import Foundation
 
+enum NetworkError: Error {
+    case badURL
+    case badData
+    case badDecode
+}
+
+extension NetworkError: CustomStringConvertible {
+    var description: String {
+        switch self {
+        case .badURL: return "Bad URL"
+        case .badData: return "Failed to get data"
+        case .badDecode: return "Failed to decode data"
+        }
+    }
+}
+
 final class ServerManager {
     
     static let manager = ServerManager()
@@ -29,6 +45,33 @@ final class ServerManager {
             let categories = try? JSONDecoder().decode(Categories.self, from: data)
             completion(categories?.items)
             
+        }.resume()
+        
+    }
+    
+    func fetchMenuItems(forCategoryName category: String, completion: @escaping ([MenuItem]?, NetworkError?) -> Void) {
+        
+        let menuItemsURL = baseURL.appendingPathComponent("menu")
+        
+        let params = ["category" : category]
+        
+        guard let finalURL = menuItemsURL.urlWithQueryItems(forParams: params) else {
+            completion(nil, .badURL)
+            return
+        }
+        
+        URLSession.shared.dataTask(with: finalURL) { (data, _, _) in
+            guard let data = data else {
+                completion(nil, .badData)
+                return
+            }
+            
+            do {
+               let menuItems = try JSONDecoder().decode(MenuItems.self, from: data)
+               completion(menuItems.items, nil)
+            } catch {
+               completion(nil, .badDecode)
+            }
         }.resume()
         
     }
