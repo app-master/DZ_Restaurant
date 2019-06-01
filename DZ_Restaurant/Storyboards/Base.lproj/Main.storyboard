@@ -81,9 +81,15 @@
                             <outlet property="delegate" destination="eRH-rS-FZV" id="D2Y-Oi-e0g"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Category name" id="6f2-0e-RMz"/>
+                    <navigationItem key="navigationItem" title="Category name" id="6f2-0e-RMz">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="add" id="cTc-5p-LJi">
+                            <connections>
+                                <segue destination="e2Z-QC-8vA" kind="show" identifier="ShowOrderId" id="jm3-6Q-190"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <segue destination="e2Z-QC-8vA" kind="show" identifier="ShowOrderId" id="vBu-Mc-YJt"/>
+                        <outlet property="addOrderButtonItem" destination="cTc-5p-LJi" id="t62-kv-oft"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aF-1J-SvJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

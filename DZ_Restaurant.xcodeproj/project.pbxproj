@@ -19,6 +19,7 @@
 		CEBF846422A2418500CABF30 /* MenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF846322A2418500CABF30 /* MenuItems.swift */; };
 		CEBF846622A241CB00CABF30 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF846522A241CB00CABF30 /* MenuItem.swift */; };
 		CEBF846822A2A38700CABF30 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF846722A2A38700CABF30 /* URL+Extension.swift */; };
+		CEE5636522A2DEF70097C0F5 /* PreparationTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE5636422A2DEF70097C0F5 /* PreparationTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		CEBF846322A2418500CABF30 /* MenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItems.swift; sourceTree = "<group>"; };
 		CEBF846522A241CB00CABF30 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		CEBF846722A2A38700CABF30 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "URL+Extension.swift"; path = "../URL+Extension.swift"; sourceTree = "<group>"; };
+		CEE5636422A2DEF70097C0F5 /* PreparationTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				CEBF846022A240D400CABF30 /* Categories.swift */,
 				CEBF846322A2418500CABF30 /* MenuItems.swift */,
 				CEBF846522A241CB00CABF30 /* MenuItem.swift */,
+				CEE5636422A2DEF70097C0F5 /* PreparationTime.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				CEBF846822A2A38700CABF30 /* URL+Extension.swift in Sources */,
 				CEBF846622A241CB00CABF30 /* MenuItem.swift in Sources */,
 				CEBF845B22A1BEBD00CABF30 /* OrderViewController.swift in Sources */,
+				CEE5636522A2DEF70097C0F5 /* PreparationTime.swift in Sources */,
 				CEBF846122A240D400CABF30 /* Categories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

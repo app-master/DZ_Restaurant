@@ -10,13 +10,26 @@ import UIKit
 
 class MenuItemsTableViewController: UITableViewController {
 
+    @IBOutlet weak var addOrderButtonItem: UIBarButtonItem!
+    
     var categoryName: String!
     var menuItemArray = [MenuItem]()
+    var selectedIDs = [Int]() {
+        didSet {
+            if selectedIDs.count > 0 {
+                self.addOrderButtonItem.isEnabled = true
+            } else {
+                self.addOrderButtonItem.isEnabled = false
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = categoryName.capitalized
+        
+        tableView.tableFooterView = UIView(frame: .zero)
         
         let serverManager = ServerManager.manager
         
@@ -32,6 +45,15 @@ class MenuItemsTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+// MARK: - Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "ShowOrderId" else { return }
+        
+        let vc = segue.destination as! OrderViewController
+        vc.selectedIDs = selectedIDs
     }
     
 }
@@ -56,6 +78,30 @@ extension MenuItemsTableViewController {
         cell.detailTextLabel?.text = menuItem.category
         
         return cell
+    }
+    
+}
+
+// MARK: - UITableViewDelegate
+
+extension MenuItemsTableViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
+        
+        let menuItem = menuItemArray[indexPath.row]
+        
+        if cell.accessoryType == .none {
+            cell.accessoryType = .checkmark
+            selectedIDs.append(menuItem.id)
+        } else {
+            cell.accessoryType = .none
+            if let index = selectedIDs.firstIndex(of: menuItem.id) {
+                selectedIDs.remove(at: index)
+            }
+        }
     }
     
 }

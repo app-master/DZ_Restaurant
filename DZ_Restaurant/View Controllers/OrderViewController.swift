@@ -9,9 +9,21 @@
 import UIKit
 
 class OrderViewController: UIViewController {
-
+    
+    var selectedIDs = [Int]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ServerManager.manager.submitOrder(forMenuIds: selectedIDs) { time, error in
+            guard let time = time else {
+                if let error = error {
+                    print(error.description)
+                }
+                return
+            }
+            print("Preparation time: \(time)")
+        }
     }
     
 }

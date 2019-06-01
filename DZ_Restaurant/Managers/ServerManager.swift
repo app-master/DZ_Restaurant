@@ -76,4 +76,41 @@ final class ServerManager {
         
     }
     
+    func submitOrder(forMenuIds ids: [Int], completion: @escaping (Int?, NetworkError?) -> Void) {
+        
+        let orderURL = baseURL.appendingPathComponent("order")
+        
+        let params = ["menuIds" : ids]
+        
+        var request = URLRequest(url: orderURL)
+        
+        request.httpMethod = "POST"
+        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let data = try? JSONSerialization.data(withJSONObject: params, options: [])
+        
+        guard let dataIDs = data else {
+            completion(nil, .badData)
+            return
+        }
+        
+        request.httpBody = dataIDs
+        
+        URLSession.shared.dataTask(with: request) { (data, _, _) in
+            guard let data = data else {
+                completion(nil, .badData)
+                return
+            }
+                        
+            do {
+                let prepTime = try JSONDecoder().decode(PreparationTime.self, from: data)
+                completion(prepTime.time, nil)
+            } catch {
+                completion(nil, .badDecode)
+            }
+        }.resume()
+        
+    }
+    
 }
