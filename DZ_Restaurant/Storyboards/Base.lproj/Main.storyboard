@@ -112,11 +112,11 @@
             </objects>
             <point key="canvasLocation" x="3546" y="118"/>
         </scene>
-        <!--Item-->
+        <!--Menu-->
         <scene sceneID="IWE-xf-YeM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e9p-MQ-SPO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="bsK-UB-k8S"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="menu" id="bsK-UB-k8S"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="huL-8f-xzF">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -150,4 +150,7 @@
             <point key="canvasLocation" x="-13.043478260869566" y="120.53571428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu" width="25" height="25"/>
+    </resources>
 </document>
