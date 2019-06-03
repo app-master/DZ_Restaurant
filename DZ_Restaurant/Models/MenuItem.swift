@@ -14,7 +14,7 @@ struct MenuItem: Decodable {
     var id: Int
     var price: Double
     var imageURL: URL
-    var descriptionText: String
+    var detailText: String
     var category: String
     
     enum CodingKeys: String, CodingKey {
@@ -22,7 +22,7 @@ struct MenuItem: Decodable {
         case id
         case price
         case imageURL = "image_url"
-        case descriptionText = "description"
+        case detailText = "description"
         case category
     }
     
@@ -33,7 +33,7 @@ struct MenuItem: Decodable {
         id = try container.decode(Int.self, forKey: .id)
         price = try container.decode(Double.self, forKey: .price)
         imageURL = try container.decode(URL.self, forKey: .imageURL)
-        descriptionText = try container.decode(String.self, forKey: .descriptionText)
+        detailText = try container.decode(String.self, forKey: .detailText)
         category = try container.decode(String.self, forKey: .category)
     }
     

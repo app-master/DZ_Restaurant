@@ -35,7 +35,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Categories" id="gSS-bE-CEb"/>
                     <connections>
-                        <segue destination="eRH-rS-FZV" kind="show" identifier="ShowMenuItemsId" id="mmM-a8-6J7"/>
+                        <segue destination="eRH-rS-FZV" kind="show" identifier="ShowMenuItemsSegue" id="mmM-a8-6J7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8Q-hV-3X8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -81,20 +81,86 @@
                             <outlet property="delegate" destination="eRH-rS-FZV" id="D2Y-Oi-e0g"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Category name" id="6f2-0e-RMz">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="add" id="cTc-5p-LJi">
-                            <connections>
-                                <segue destination="e2Z-QC-8vA" kind="show" identifier="ShowOrderId" id="jm3-6Q-190"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Category name" id="6f2-0e-RMz"/>
                     <connections>
-                        <outlet property="addOrderButtonItem" destination="cTc-5p-LJi" id="t62-kv-oft"/>
+                        <segue destination="WsT-SF-BM5" kind="show" identifier="ShowMenuItemDetailSegue" id="1cj-3h-x9I"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aF-1J-SvJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2674" y="118"/>
+            <point key="canvasLocation" x="2687" y="121"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="AoB-zB-Eln">
+            <objects>
+                <viewController storyboardIdentifier="MenuItemDetailViewController" id="WsT-SF-BM5" customClass="MenuItemDetailViewController" customModule="DZ_Restaurant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8cx-II-bTF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bPk-Pu-dIE">
+                                <rect key="frame" x="20" y="160" width="374" height="633"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MargheritaPizza" translatesAutoresizingMaskIntoConstraints="NO" id="OEK-6B-O3b">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="311.5"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2Zo-uo-rBA">
+                                        <rect key="frame" x="0.0" y="321.5" width="374" height="311.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Grilled Steelhead Trout Sandwich" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkd-VN-fHl">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="95.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNl-tJ-vHN">
+                                                <rect key="frame" x="0.0" y="95.5" width="374" height="168"/>
+                                                <string key="text">Stewed sliced beef with yellow onions and garlic in a vinegar-soy sauce. Served with steamed jasmine rice and sautГ©ed vegetables.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5P-ag-7HH">
+                                                <rect key="frame" x="0.0" y="263.5" width="374" height="48"/>
+                                                <color key="backgroundColor" red="0.39518495910000001" green="0.64390117410000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="Add to Order">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="actionAddToOrderWithSender:" destination="WsT-SF-BM5" eventType="touchUpInside" id="MRI-n2-UCJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bPk-Pu-dIE" firstAttribute="leading" secondItem="5Ra-JF-ACT" secondAttribute="leading" constant="20" id="6UE-6G-Hfa"/>
+                            <constraint firstItem="bPk-Pu-dIE" firstAttribute="top" secondItem="5Ra-JF-ACT" secondAttribute="top" constant="20" id="ByF-pJ-E74"/>
+                            <constraint firstItem="5Ra-JF-ACT" firstAttribute="trailing" secondItem="bPk-Pu-dIE" secondAttribute="trailing" constant="20" id="VVo-Be-6Sz"/>
+                            <constraint firstItem="5Ra-JF-ACT" firstAttribute="bottom" secondItem="bPk-Pu-dIE" secondAttribute="bottom" constant="20" id="W0e-DL-aC5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Ra-JF-ACT"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="wvp-hh-gvD"/>
+                    <connections>
+                        <outlet property="detailLabel" destination="aNl-tJ-vHN" id="GVa-cF-nj8"/>
+                        <outlet property="imageView" destination="OEK-6B-O3b" id="SzD-tR-5Of"/>
+                        <outlet property="nameLabel" destination="Dkd-VN-fHl" id="4MO-Vj-A3f"/>
+                        <outlet property="topStackView" destination="bPk-Pu-dIE" id="BcG-qL-Drs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hny-eO-ter" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3550.7246376811595" y="120.53571428571428"/>
         </scene>
         <!--Order-->
         <scene sceneID="eLL-37-pmq">
@@ -110,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jer-fW-tlI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3546" y="118"/>
+            <point key="canvasLocation" x="1807" y="808"/>
         </scene>
         <!--Menu-->
         <scene sceneID="IWE-xf-YeM">
@@ -143,14 +209,36 @@
                     </tabBar>
                     <connections>
                         <segue destination="e9p-MQ-SPO" kind="relationship" relationship="viewControllers" id="U4G-Bc-de7"/>
+                        <segue destination="YlE-ij-jY0" kind="relationship" relationship="viewControllers" id="2Bo-bq-fpu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="av3-Vu-Iea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13.043478260869566" y="120.53571428571428"/>
+            <point key="canvasLocation" x="-206" y="484"/>
+        </scene>
+        <!--Order-->
+        <scene sceneID="Tht-aE-Vsd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YlE-ij-jY0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Order" image="wallet" id="N5V-uG-Di6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5cm-uc-uR1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e2Z-QC-8vA" kind="relationship" relationship="rootViewController" id="Cut-JS-0Kd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="owi-Wm-u4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="897" y="808"/>
         </scene>
     </scenes>
     <resources>
+        <image name="MargheritaPizza" width="540" height="540"/>
         <image name="menu" width="25" height="25"/>
+        <image name="wallet" width="25" height="25"/>
     </resources>
 </document>

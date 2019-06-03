@@ -50,7 +50,7 @@ extension CategoriesTableViewController {
     
        let category = categories[indexPath.row]
     
-       cell.textLabel?.text = category.capitalized
+       CellManager.configureCell(cell, withCategory: category)
     
        return cell
     
@@ -62,14 +62,15 @@ extension CategoriesTableViewController {
 extension CategoriesTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
-        let categoryName = categories[indexPath.row]
+        let category = categories[indexPath.row]
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let vc = storyboard.instantiateViewController(withIdentifier: "MenuItemsTableViewController") as! MenuItemsTableViewController
         
-        vc.categoryName = categoryName
+        vc.category = category
         
         navigationController?.pushViewController(vc, animated: true)
         

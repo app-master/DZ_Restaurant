@@ -49,7 +49,7 @@ final class ServerManager {
         
     }
     
-    func fetchMenuItems(forCategoryName category: String, completion: @escaping ([MenuItem]?, NetworkError?) -> Void) {
+    func fetchMenuItems(forCategory category: String, completion: @escaping ([MenuItem]?, NetworkError?) -> Void) {
         
         let menuItemsURL = baseURL.appendingPathComponent("menu")
         
