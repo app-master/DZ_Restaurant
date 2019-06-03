@@ -20,6 +20,16 @@ class MenuItemDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        adjustSizes()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        transition(to: view.bounds.size)
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        transition(to: size)
     }
     
     func setupUI() {
@@ -28,8 +38,14 @@ class MenuItemDetailViewController: UIViewController {
         detailLabel.text = menuItem.detailText
     }
     
+    func transition(to size: CGSize) {
+        topStackView.axis = size.width < size.height ? .vertical :.horizontal
+    }
+    
     @IBAction func actionAddToOrder(sender: UIButton) {
         print(#line, #function)
     }
 
 }
+
+extension MenuItemDetailViewController: SizeAdjustable {}
