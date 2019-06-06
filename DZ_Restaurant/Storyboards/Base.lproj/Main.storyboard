@@ -162,22 +162,6 @@
             </objects>
             <point key="canvasLocation" x="3550.7246376811595" y="120.53571428571428"/>
         </scene>
-        <!--Order-->
-        <scene sceneID="eLL-37-pmq">
-            <objects>
-                <viewController id="e2Z-QC-8vA" customClass="OrderViewController" customModule="DZ_Restaurant" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dfc-We-mcc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Juw-6g-mmL"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Order" id="cKM-og-eSO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jer-fW-tlI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1807" y="808"/>
-        </scene>
         <!--Menu-->
         <scene sceneID="IWE-xf-YeM">
             <objects>
@@ -222,18 +206,63 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YlE-ij-jY0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Order" image="wallet" id="N5V-uG-Di6"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5cm-uc-uR1">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="5cm-uc-uR1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="e2Z-QC-8vA" kind="relationship" relationship="rootViewController" id="Cut-JS-0Kd"/>
+                        <segue destination="7uy-VR-OPW" kind="relationship" relationship="rootViewController" id="RJv-hr-eDv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="owi-Wm-u4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="897" y="808"/>
+        </scene>
+        <!--Order-->
+        <scene sceneID="iUV-OI-b8d">
+            <objects>
+                <tableViewController id="7uy-VR-OPW" customClass="OrderTableViewController" customModule="DZ_Restaurant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5p0-dz-D4X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" textLabel="Wle-md-GIy" detailTextLabel="ded-ht-NrX" style="IBUITableViewCellStyleSubtitle" id="AFT-tD-hZe">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AFT-tD-hZe" id="ZLK-nm-aC9">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wle-md-GIy">
+                                            <rect key="frame" x="20" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ded-ht-NrX">
+                                            <rect key="frame" x="20" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7uy-VR-OPW" id="ZqW-qv-AAv"/>
+                            <outlet property="delegate" destination="7uy-VR-OPW" id="Qzc-fb-B2n"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Order" id="2Ej-8W-5YI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XA5-50-0xP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1807" y="808"/>
         </scene>
     </scenes>
     <resources>

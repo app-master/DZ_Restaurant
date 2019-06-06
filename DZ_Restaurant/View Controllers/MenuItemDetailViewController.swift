@@ -43,7 +43,13 @@ class MenuItemDetailViewController: UIViewController {
     }
     
     @IBAction func actionAddToOrder(sender: UIButton) {
-        print(#line, #function)
+        UIView.animate(withDuration: 0.3) {
+            sender.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
+            sender.transform = CGAffineTransform.identity
+        }
+        
+       let orderManager = OrderManager.manager
+       orderManager.appendItemToOrder(item: menuItem)
     }
 
 }

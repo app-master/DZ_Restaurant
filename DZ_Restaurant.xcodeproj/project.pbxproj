@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2BD33922A9442300CF3CF4 /* OrderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD33822A9442300CF3CF4 /* OrderManager.swift */; };
+		CE2BD33B22A9510900CF3CF4 /* Notification.Name+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD33A22A9510900CF3CF4 /* Notification.Name+Extension.swift */; };
+		CE2BD33D22A9547900CF3CF4 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD33C22A9547900CF3CF4 /* OrderTableViewController.swift */; };
 		CE6F372E22A4E82C008183D8 /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F372D22A4E82C008183D8 /* MenuItemDetailViewController.swift */; };
 		CE6F373022A4ECB1008183D8 /* CellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F372F22A4ECB1008183D8 /* CellManager.swift */; };
 		CE6F373222A57D92008183D8 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F373122A57D92008183D8 /* FontManager.swift */; };
@@ -17,7 +20,6 @@
 		CEBF844B22A1B8CE00CABF30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBF844922A1B8CE00CABF30 /* LaunchScreen.storyboard */; };
 		CEBF845722A1BE3100CABF30 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF845622A1BE3100CABF30 /* CategoriesTableViewController.swift */; };
 		CEBF845922A1BE7500CABF30 /* MenuItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF845822A1BE7500CABF30 /* MenuItemsTableViewController.swift */; };
-		CEBF845B22A1BEBD00CABF30 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF845A22A1BEBD00CABF30 /* OrderViewController.swift */; };
 		CEBF845E22A1BF7900CABF30 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF845D22A1BF7900CABF30 /* ServerManager.swift */; };
 		CEBF846122A240D400CABF30 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF846022A240D400CABF30 /* Categories.swift */; };
 		CEBF846422A2418500CABF30 /* MenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF846322A2418500CABF30 /* MenuItems.swift */; };
@@ -27,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE2BD33822A9442300CF3CF4 /* OrderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManager.swift; sourceTree = "<group>"; };
+		CE2BD33A22A9510900CF3CF4 /* Notification.Name+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Extension.swift"; sourceTree = "<group>"; };
+		CE2BD33C22A9547900CF3CF4 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
 		CE6F372D22A4E82C008183D8 /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
 		CE6F372F22A4ECB1008183D8 /* CellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellManager.swift; sourceTree = "<group>"; };
 		CE6F373122A57D92008183D8 /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
@@ -39,7 +44,6 @@
 		CEBF844C22A1B8CE00CABF30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEBF845622A1BE3100CABF30 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		CEBF845822A1BE7500CABF30 /* MenuItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsTableViewController.swift; sourceTree = "<group>"; };
-		CEBF845A22A1BEBD00CABF30 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		CEBF845D22A1BF7900CABF30 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 		CEBF846022A240D400CABF30 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		CEBF846322A2418500CABF30 /* MenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItems.swift; sourceTree = "<group>"; };
@@ -122,7 +126,7 @@
 				CEBF845622A1BE3100CABF30 /* CategoriesTableViewController.swift */,
 				CEBF845822A1BE7500CABF30 /* MenuItemsTableViewController.swift */,
 				CE6F372D22A4E82C008183D8 /* MenuItemDetailViewController.swift */,
-				CEBF845A22A1BEBD00CABF30 /* OrderViewController.swift */,
+				CE2BD33C22A9547900CF3CF4 /* OrderTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -133,6 +137,7 @@
 				CEBF845D22A1BF7900CABF30 /* ServerManager.swift */,
 				CE6F372F22A4ECB1008183D8 /* CellManager.swift */,
 				CE6F373122A57D92008183D8 /* FontManager.swift */,
+				CE2BD33822A9442300CF3CF4 /* OrderManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				CEBF846722A2A38700CABF30 /* URL+Extension.swift */,
+				CE2BD33A22A9510900CF3CF4 /* Notification.Name+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -227,16 +233,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2BD33B22A9510900CF3CF4 /* Notification.Name+Extension.swift in Sources */,
 				CEBF845E22A1BF7900CABF30 /* ServerManager.swift in Sources */,
+				CE2BD33D22A9547900CF3CF4 /* OrderTableViewController.swift in Sources */,
 				CEBF845922A1BE7500CABF30 /* MenuItemsTableViewController.swift in Sources */,
 				CEBF844122A1B8CC00CABF30 /* AppDelegate.swift in Sources */,
 				CEBF845722A1BE3100CABF30 /* CategoriesTableViewController.swift in Sources */,
+				CE2BD33922A9442300CF3CF4 /* OrderManager.swift in Sources */,
 				CEBF846422A2418500CABF30 /* MenuItems.swift in Sources */,
 				CEBF846822A2A38700CABF30 /* URL+Extension.swift in Sources */,
 				CE6F372E22A4E82C008183D8 /* MenuItemDetailViewController.swift in Sources */,
 				CE6F373022A4ECB1008183D8 /* CellManager.swift in Sources */,
 				CEBF846622A241CB00CABF30 /* MenuItem.swift in Sources */,
-				CEBF845B22A1BEBD00CABF30 /* OrderViewController.swift in Sources */,
 				CE6F373222A57D92008183D8 /* FontManager.swift in Sources */,
 				CE6F373522A57DE5008183D8 /* SizeAdjustable.swift in Sources */,
 				CEE5636522A2DEF70097C0F5 /* PreparationTime.swift in Sources */,
