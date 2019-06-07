@@ -26,6 +26,14 @@ final class OrderManager {
         return order.items.count
     }
     
+    var totalPrice: Double {
+       return order.items.reduce(0) { $0 + $1.price }
+    }
+    
+    var selectedIds: [Int] {
+        return order.items.map { $0.id }
+    }
+    
     private init() {}
     
     func appendItemToOrder(item: MenuItem) {
@@ -35,7 +43,12 @@ final class OrderManager {
     
     func removeItemFromOrder(at index: Int) {
         order.items.remove(at: index)
-        NotificationCenter.default.post(name: .RemovedItemFromOrder, object: nil)
+        NotificationCenter.default.post(name: .RemovedItemsFromOrder, object: nil)
+    }
+    
+    func removeAllItemsFromOrder() {
+        order.items.removeAll()
+        NotificationCenter.default.post(name: .RemovedItemsFromOrder, object: nil)
     }
     
     func getItemFromOrder(at index: Int) -> MenuItem {

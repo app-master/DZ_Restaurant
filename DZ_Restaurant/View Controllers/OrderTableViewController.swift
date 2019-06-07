@@ -10,6 +10,8 @@ import UIKit
 
 class OrderTableViewController: UITableViewController {
     
+    @IBOutlet weak var confirmButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,11 +21,36 @@ class OrderTableViewController: UITableViewController {
                                                selector: #selector(UITableView.reloadData),
                                                name: .AddedItemToOrder, object: nil)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        confirmButton.isEnabled = OrderManager.manager.countItems > 0
+    }
 
     deinit {
         NotificationCenter.default.removeObserver(self,
                                                   name: .AddedItemToOrder,
                                                   object: nil)
+    }
+    
+    @IBAction func actionConfirmButton(_ sender: UIBarButtonItem) {
+        
+        let totalPrice = String(format: "$%.2f", OrderManager.manager.totalPrice)
+        let title = "Confirm order"
+        let message = "Preparation of the order will be initiated for a total of \(totalPrice)"
+        
+        showAlertWith(title: title, message: message, confirm: { action in
+            self.performSegue(withIdentifier: "ShowPerformanceSegue", sender: action)
+        }, cancel: nil)
+        
+    }
+    
+    // MARK: - Segue
+    
+    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
+        if unwindSegue.identifier == "ToOrderUnwindSegue" {
+            tableView.reloadData()
+        }
     }
     
 }
@@ -58,10 +85,5 @@ extension OrderTableViewController {
             tableView.deleteRows(at: [indexPath], with: .left)
         }
     }
-    
-}
-
-// MARK: - UITableViewDelegate
-extension OrderTableViewController {
     
 }

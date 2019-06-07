@@ -10,5 +10,5 @@ import Foundation
 
 extension Notification.Name {
     static let AddedItemToOrder = Notification.Name("AddedItemToOrder")
-    static let RemovedItemFromOrder = Notification.Name("RemovedItemFromOrder")
+    static let RemovedItemsFromOrder = Notification.Name("RemovedItemsFromOrder")
 }

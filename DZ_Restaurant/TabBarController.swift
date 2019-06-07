@@ -26,7 +26,7 @@ class TabBarController: UITabBarController {
                                                    object: nil)
             NotificationCenter.default.addObserver(self,
                                                    selector: #selector(updateOrderBadge),
-                                                   name: .RemovedItemFromOrder,
+                                                   name: .RemovedItemsFromOrder,
                                                    object: nil)
         }
     }
@@ -46,7 +46,7 @@ class TabBarController: UITabBarController {
                                                   name: .AddedItemToOrder,
                                                   object: nil)
         NotificationCenter.default.removeObserver(self,
-                                                  name: .RemovedItemFromOrder,
+                                                  name: .RemovedItemsFromOrder,
                                                   object: nil)
     }
 
