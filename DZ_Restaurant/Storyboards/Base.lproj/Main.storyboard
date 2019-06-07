@@ -184,7 +184,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Dmv-Tm-aIQ">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mb9-Lj-Ip6" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mb9-Lj-Ip6" customClass="TabBarController" customModule="DZ_Restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UC7-aa-pVa">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

@@ -35,6 +35,7 @@ final class OrderManager {
     
     func removeItemFromOrder(at index: Int) {
         order.items.remove(at: index)
+        NotificationCenter.default.post(name: .RemovedItemFromOrder, object: nil)
     }
     
     func getItemFromOrder(at index: Int) -> MenuItem {
