@@ -22,4 +22,10 @@ extension URL {
         
     }
     
+    func utlByReplacingOfHost(_ host: String) -> URL? {
+        var components = URLComponents(url: self, resolvingAgainstBaseURL: true)
+        components?.host = host
+        return components?.url
+    }
+    
 }

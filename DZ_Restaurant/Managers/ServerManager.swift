@@ -6,7 +6,7 @@
 //  Copyright © 2019 Sergey Koshlakov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum NetworkError: Error {
     case badURL
@@ -109,6 +109,24 @@ final class ServerManager {
             } catch {
                 completion(nil, .badDecode)
             }
+        }.resume()
+        
+    }
+    
+    func fetchImage(byURL url: URL, completion:@escaping (UIImage?) -> Void) {
+        
+        guard let globalURL = url.utlByReplacingOfHost(baseURL.host!) else {
+            completion(nil)
+            return
+        }
+         
+        URLSession.shared.dataTask(with: globalURL) { (data, _, _) in
+            guard let data = data else {
+                completion(nil)
+                return
+            }
+            let image = UIImage(data: data)
+            completion(image)
         }.resume()
         
     }

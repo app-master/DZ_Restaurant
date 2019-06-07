@@ -36,6 +36,13 @@ class MenuItemDetailViewController: UIViewController {
         navigationItem.title = String(format: "$%.2f", menuItem.price)
         nameLabel.text = menuItem.name
         detailLabel.text = menuItem.detailText
+        
+        ServerManager.manager.fetchImage(byURL: menuItem.imageURL) { (image) in
+            guard let image = image else { return }
+            DispatchQueue.main.async {
+                self.imageView.image = image
+            }
+        }
     }
     
     func transition(to size: CGSize) {

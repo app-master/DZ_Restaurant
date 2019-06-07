@@ -101,7 +101,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bPk-Pu-dIE">
                                 <rect key="frame" x="20" y="160" width="374" height="633"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MargheritaPizza" translatesAutoresizingMaskIntoConstraints="NO" id="OEK-6B-O3b">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OEK-6B-O3b">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="311.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2Zo-uo-rBA">
@@ -266,7 +266,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MargheritaPizza" width="540" height="540"/>
         <image name="menu" width="25" height="25"/>
         <image name="wallet" width="25" height="25"/>
     </resources>
