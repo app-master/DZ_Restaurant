@@ -54,7 +54,7 @@ class MenuItemDetailViewController: UIViewController {
             sender.transform = CGAffineTransform.identity
         }
         
-       OrderManager.manager.appendItemToOrder(item: menuItem)
+       OrderManager.manager.addItemToOrder(menuItem)
     }
 
 }

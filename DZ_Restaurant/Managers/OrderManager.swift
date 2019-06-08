@@ -36,8 +36,9 @@ final class OrderManager {
     
     private init() {}
     
-    func appendItemToOrder(item: MenuItem) {
+    func addItemToOrder(_ item: MenuItem) {
         order.items.append(item)
+        order.items.sort { $0.id < $1.id }
         NotificationCenter.default.post(name: .AddedItemToOrder, object: nil)
     }
     
