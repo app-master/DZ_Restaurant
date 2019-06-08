@@ -13,5 +13,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        setupURLCache()
+        
+        return true
+    }
+    
+    func setupURLCache() {
+      let directory = NSTemporaryDirectory()
+      let urlCache = URLCache(memoryCapacity: 250_000, diskCapacity: 5_000_000, diskPath: directory)
+      URLCache.shared = urlCache
+    }
+    
 }
 

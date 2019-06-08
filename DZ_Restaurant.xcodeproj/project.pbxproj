@@ -17,6 +17,7 @@
 		CEB6D32622AAA88B004BD717 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6D32522AAA88B004BD717 /* TabBarController.swift */; };
 		CEB6D32922AADB04004BD717 /* PerformanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6D32822AADB04004BD717 /* PerformanceViewController.swift */; };
 		CEB6D32B22AADCAF004BD717 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6D32A22AADCAF004BD717 /* UIViewController+Extension.swift */; };
+		CEB6D32D22ABF5CC004BD717 /* placeholder.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CEB6D32C22ABF5CB004BD717 /* placeholder.jpeg */; };
 		CEBF844122A1B8CC00CABF30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF844022A1B8CC00CABF30 /* AppDelegate.swift */; };
 		CEBF844622A1B8CC00CABF30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBF844422A1B8CC00CABF30 /* Main.storyboard */; };
 		CEBF844822A1B8CE00CABF30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBF844722A1B8CE00CABF30 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		CEB6D32522AAA88B004BD717 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = ../TabBarController.swift; sourceTree = "<group>"; };
 		CEB6D32822AADB04004BD717 /* PerformanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceViewController.swift; sourceTree = "<group>"; };
 		CEB6D32A22AADCAF004BD717 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		CEB6D32C22ABF5CB004BD717 /* placeholder.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpeg; path = ../placeholder.jpeg; sourceTree = "<group>"; };
 		CEBF843D22A1B8CC00CABF30 /* DZ_Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DZ_Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBF844022A1B8CC00CABF30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEBF844522A1B8CC00CABF30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 				CEB6D32522AAA88B004BD717 /* TabBarController.swift */,
 			);
 			path = "Other Controllers";
+			sourceTree = "<group>";
+		};
+		CEB6D32E22ABF5D3004BD717 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CEB6D32C22ABF5CB004BD717 /* placeholder.jpeg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		CEBF843422A1B8CC00CABF30 = {
@@ -128,6 +138,7 @@
 		CEBF845322A1B94900CABF30 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CEB6D32E22ABF5D3004BD717 /* Images */,
 				CEBF844022A1B8CC00CABF30 /* AppDelegate.swift */,
 				CEBF844722A1B8CE00CABF30 /* Assets.xcassets */,
 				CEBF844C22A1B8CE00CABF30 /* Info.plist */,
@@ -240,6 +251,7 @@
 				CEBF844B22A1B8CE00CABF30 /* LaunchScreen.storyboard in Resources */,
 				CEBF844822A1B8CE00CABF30 /* Assets.xcassets in Resources */,
 				CEBF844622A1B8CC00CABF30 /* Main.storyboard in Resources */,
+				CEB6D32D22ABF5CC004BD717 /* placeholder.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

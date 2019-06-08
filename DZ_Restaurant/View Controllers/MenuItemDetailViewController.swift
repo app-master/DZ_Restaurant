@@ -37,8 +37,7 @@ class MenuItemDetailViewController: UIViewController {
         nameLabel.text = menuItem.name
         detailLabel.text = menuItem.detailText
         
-        ServerManager.manager.fetchImage(byURL: menuItem.imageURL) { (image) in
-            guard let image = image else { return }
+        ServerManager.manager.fetchImage(byURL: menuItem.imageURL) { image in
             DispatchQueue.main.async {
                 self.imageView.image = image
             }

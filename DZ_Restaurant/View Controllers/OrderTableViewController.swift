@@ -83,6 +83,7 @@ extension OrderTableViewController {
         if editingStyle == .delete {
             OrderManager.manager.removeItemFromOrder(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .left)
+            confirmButton.isEnabled = OrderManager.manager.countItems > 0
         }
     }
     

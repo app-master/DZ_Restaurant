@@ -17,13 +17,10 @@ final class CellManager {
     static func configureCell(_ cell: UITableViewCell, withMenuItem menuItem: MenuItem) {
         cell.textLabel?.text = menuItem.name
         cell.detailTextLabel?.text = String(format: "$%.2f", menuItem.price)
-        cell.imageView?.image = nil
         
-        ServerManager.manager.fetchImage(byURL: menuItem.imageURL) { (image) in
-            guard let image = image else { return }
+        ServerManager.manager.fetchImage(byURL: menuItem.imageURL) { image in
             DispatchQueue.main.async {
                 cell.imageView?.image = image
-                cell.layoutSubviews()
             }
         }
     }
